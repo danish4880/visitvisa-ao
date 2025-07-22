@@ -1,14 +1,4 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 4000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
 import os
 from flask import Flask, request, render_template_string
 import requests
@@ -98,7 +88,17 @@ def filter_by_regions(countries, selected_regions):
     if 'all' in selected_regions:
         return countries
     return [c for c in countries if c['region'] in selected_regions]
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 def generate_chart(countries):
     labels = [c['name'] for c in countries]
     success = [int(c['success_rate'].strip('%')) for c in countries]
