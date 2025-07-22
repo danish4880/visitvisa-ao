@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template_string
 import requests
 from bs4 import BeautifulSoup
@@ -122,3 +123,7 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 10000))  # default to 10000 if not set
+    app.run(host='0.0.0.0', port=port)
